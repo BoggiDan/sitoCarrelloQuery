@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Per le icone (menu hamburger e X nel responsive)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Prenotazione</title>
+  </head>
+
+  <body>
+    <!--menù orizzontale-->
+    <nav class="navbar">
+        <div class="max">
+    
+          <div class="home"><img src="" alt=""><a href="libreria.php"> Libreria Ulisse</a></div>
+          <ul class="menu">
+            <li>
+              <a href="doveSiamo.html"> Dove siamo <br /> </a>
+            </li>
+    
+            <li>
+              <a href="carrello.php"> Carrello <br /> </a>
+            </li>
+          </ul>
+    </nav>
+    
+    <div id="immSfondo">
+      <div id="titlePrenotazione1">DATI PERSONALI</div>
+      
+      <form action="prenota.php" method="POST">
+        <fieldset>  
+          <!-- <legend>Modulo da compilare</legend> -->
+          <p>Inserisci i seguenti dati:</p>
+
+          <p>
+            <label> Nome: </label>
+            <input type="text" id="fname" name="fname" placeholder="Nome" required/>
+          </p>
+
+          <p>
+              <label> Cognome: </label>
+              <input type="text" id="lname" name="lname" placeholder="Cognome"required/>
+          </p>
+          
+          <p>
+            <label> Email: </label>
+            <input type="email" id="email" name="email" placeholder="es. nome@email.com" required/>
+          </p>
+
+          <p>
+            <label> Numero di telefono: </label>
+            <input type="text" id="telefono" name="telefono" placeholder="Cellulare" required/>
+          </p>
+
+        <p>
+          <label> Regione: </label>
+          <select>
+            <option>Seleziona</option>
+
+            <option>Abruzzo</option>
+
+            <option>Basilicata</option>
+
+            <option>Calabria</option>
+
+            <option>Campania</option>
+
+            <option>Emilia Romagna</option>
+
+            <option>Friuli Venezia Giulia</option>
+
+            <option>Lazio</option>
+
+            <option>Liguria</option>
+
+            <option>Lombardia</option>
+
+            <option>Marche</option>
+
+            <option>Molise</option>
+
+            <option>Piemonte</option>
+
+            <option>Puglia</option>
+
+            <option>Sardegna</option>
+
+            <option>Sicilia</option>
+
+            <option>Toscana</option>
+
+            <option>Trentino Alto Adige</option>
+
+            <option>Umbria</option>
+
+            <option>Val d'Aosta</option>
+
+            <option>Veneto</option>
+          </select>
+          <br />
+        </p>
+
+        <p id="invii">
+          <label>
+            <input type="reset" name="Rifai" value="Rifai" id="bottoneInvio"/>
+          </label>
+  
+          <label>
+            <input type="submit" name="Invia" value="Invia" id="bottoneInvio" formaction="prenota.php"/>
+          </label>
+        </p>
+      </fieldset>
+    </form>
+  <!-- </div> -->
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <!-- <p class="scrittaSocial">Social</p> -->
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p class="copyright">Copyright by Boggian Daniele</p>
+    </div>
+  </body>
+</html>
