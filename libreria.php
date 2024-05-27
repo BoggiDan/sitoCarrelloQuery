@@ -46,6 +46,14 @@ $user = $_SESSION["active_login"]; //assegna a $user il nome memorizzato
         </li>
 
         <li>
+          <a href="inserisci.php"> Inserisci libro <br /> </a>
+        </li>
+
+        <li>
+          <a href="ricerca.php"> Ricerca libro <br /> </a>
+        </li>
+
+        <li>
           <a href="carrello.php"> Carrello <br /> </a>
         </li>
       </ul>
@@ -76,7 +84,7 @@ $user = $_SESSION["active_login"]; //assegna a $user il nome memorizzato
       $id = $row['id'];
       $titolo = $row['Titolo'];
       $autore = $row['Autore'];
-      $immagine = base64_encode($row['Immagine']);
+      $immagine = $row['urlImage'];
       $genere = $row['Genere'];
       $descrizione = $row['Descrizione'];
       $prezzo = $row['Prezzo'];
@@ -86,7 +94,7 @@ $user = $_SESSION["active_login"]; //assegna a $user il nome memorizzato
         <div class = "container">
             <div class="titolo">$titolo</div>
             <div class="autore">$autore</div>
-            <div class="immagine"><img src="data:image/jpeg;base64, $immagine"/></div>
+            <div class="immagine"><img src="$immagine"/></div>
             <div class="genere">$genere</div>
             <div class="descrizione">$descrizione</div>
             <!-- <div class="quantita">$key[quantita]</div> -->
@@ -103,39 +111,12 @@ $user = $_SESSION["active_login"]; //assegna a $user il nome memorizzato
         </div> </div>
         </div>
         HTML;
-    echo $stampa;
+      echo $stampa;
     }
   }
-
-  // foreach ($libro as $key) {
-  //   $stampa = <<<HTML
-  //       <div class = "container">
-  //           <div class="titolo">$titolo</div>
-  //           <div class="autore">$autore</div>
-  //           <div class="immagine"><img src=$immagine></div>
-  //           <div class="genere">$genere</div>
-  //           <div class="descrizione">$descrizione</div>
-  //           <!-- <div class="quantita">$key[quantita]</div> -->
-  //           <div class="prezzo"> <div class = "costo"> Prezzo: {$format($prezzo)}€ </div> <div class = "bottone">
-
-  //           <form action="" method="post">
-  //               <div id="formAggiungi">
-  //                 <div class="quantita"><input type="number" name="quantita" min="0" max="$quantita" value="0"></div>
-  //                 <label for="compra$id" id="aggiungiProdotto">Aggiungi</label>
-  //                 <input type="submit" id="compra$id" name="compra" value="$id" style="display:none;">
-  //               </div>
-  //           </form>
-            
-  //       </div> </div>
-  //       </div>
-  //       HTML;
-  //   echo $stampa;
-  // }
+  $conn->close();
   ?>
 
-  <!-- <form action="" method="post" id="procedi">
-    <input type="submit" id="procedi" name="procedi" value="Procedi">
-  </form> -->
 
   <form action="" method="post" id="UserInfo">
     <input type="submit" id="logout" name="logout" value="Logout">

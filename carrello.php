@@ -53,6 +53,14 @@ $costoTotaleCarrello = 0;
                 </li>
 
                 <li>
+                    <a href="inserisci.php"> Inserisci libro <br /> </a>
+                </li>
+
+                <li>
+                    <a href="ricerca.php"> Ricerca libro <br /> </a>
+                </li>
+
+                <li>
                     <a href="carrello.php"> Carrello <br /> </a>
                 </li>
             </ul>
@@ -85,7 +93,7 @@ $costoTotaleCarrello = 0;
                 $id = $result['id'];
                 $titolo = $result['Titolo'];
                 $autore = $result['Autore'];
-                $immagine = base64_encode($result['Immagine']);
+                $immagine = $result['urlImage'];
                 $genere = $result['Genere'];
                 $descrizione = $result['Descrizione'];
                 $prezzo = $result['Prezzo'];
@@ -93,7 +101,7 @@ $costoTotaleCarrello = 0;
                 echo <<<HTML
                     <div class="divCarrello">
                         <div class="immaginiCarrello">
-                            <img src="data:image/jpeg;base64, $immagine"/>
+                            <img src="$immagine"/>
                         </div>
                         <div class="titoloCarrello">
                             $titolo <br> $autore 

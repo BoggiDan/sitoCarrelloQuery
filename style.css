@@ -196,6 +196,35 @@ form {
 
 /*LIBRERIA/PRODOTTI*/
 
+#ricerca{
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+
+#ricerca form{
+  height: 0;
+  flex-direction: row;
+}
+
+#lente{
+  background-image: url("loupe.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+#barraRicerca{
+  border-radius: 15px;
+  width: 20%;
+  height: 35px;
+  margin: 0;
+}
 #titlePrenotazione1 {
   width: 100%;
   text-align: center;
@@ -420,6 +449,26 @@ img {
   /* font-style: italic; */
   padding: 10px;
   margin: 5px;
+}
+
+/*INSERISCI*/
+
+#inserisci fieldset{
+  margin: 25px 0;
+  border-radius: 20px;
+}
+
+#inserisci form{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+#inserisci form #inserisciBottone{
+  padding: 10px 10px;
+  border-radius: 10px;
+  align-items: center;
+  align-content: center;
 }
 
 /*CARRELLO*/
